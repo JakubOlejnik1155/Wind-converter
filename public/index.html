@@ -15,6 +15,9 @@
   </head>
   <body>
     <div id="root"></div>
+    <!-- <div id="btn-container" style="background-color: red; width: 200px; padding: 20px; position: absolute; bottom: 10px; left: 50%; text-align: center; transform: translate(-50%, 0);">
+      <button id="btn">Install PWA App</button>
+    </div> -->
     <noscript>
     </noscript>
     <script>
@@ -25,6 +28,36 @@
             .catch(err => console.log('Error', err))
         })
       }
+
+      // let deferredPrompt;
+      // const btn = document.querySelector('#btn');
+      // const btnContainer = document.querySelector('#btn-container');
+      // btnContainer.style.display = 'none'
+
+      //   window.addEventListener('beforeinstallprompt', (e) => {
+      //     // Prevent the mini-infobar from appearing on mobile
+      //     e.preventDefault();
+      //     // Stash the event so it can be triggered later.
+      //     deferredPrompt = e;
+      //     // Update UI notify the user they can install the PWA
+      //     btnContainer.style.display = 'block';
+
+      //     btn.addEventListener('click', (e) => {
+      //       // Hide the app provided install promotion
+      //       btnContainer.style.display = 'none'
+      //       // Show the install prompt
+      //       deferredPrompt.prompt();
+      //       // Wait for the user to respond to the prompt
+      //       deferredPrompt.userChoice.then((choiceResult) => {
+      //         if (choiceResult.outcome === 'accepted') {
+      //           console.log('User accepted the install prompt');
+      //         } else {
+      //           console.log('User dismissed the install prompt');
+      //         }
+      //       });
+      //     });
+
+      //   });
     </script>
   </body>
 </html>

@@ -4,6 +4,7 @@ import Cookies from 'js-cookie';
 import {FormControl, InputGroup} from 'react-bootstrap';
 
 import BeaufortData from './constants/Beaufort.json';
+import InstallPopupp from './InstallPopup';
 
 const Container = styled.div`
   width: 100%;
@@ -57,7 +58,7 @@ const App = () => {
             setIsDarkThemeOn(true)
         }
     },[])
-    
+
     const inputChangeHandler = (event) => {
         let value = parseFloat(event.target.value.replace(',', '.'));
         for (let i = 0; i <event.target.value.length; i++) {
@@ -106,7 +107,7 @@ const App = () => {
               b = '';
             } else {
               knt =  Math.round(event.target.value / 0.514444 * 10) / 10;
-              kph = event.target.value * 3.6;
+              kph = Math.round(event.target.value * 3.6 * 10) /10;
               b = Math.round(1.127 * Math.pow(event.target.value, 2 / 3));
               if (b > 12) b = 12;
             }
@@ -131,7 +132,7 @@ const App = () => {
         setState({...state, ...tmpStateObject, [event.target.name]: event.target.value})
       }
     }
-    
+
     const changeThemeHandler = () => {
         if(!isDarkThemeOn) {
             Cookies.set("darktheme", true, {expires: 365});
@@ -143,7 +144,7 @@ const App = () => {
     }
 
     return (
-      <div style={{ position: "relative" }}>
+      <div style={{ position: "relative", overflow: 'hidden' }}>
         <Container darkTheme={isDarkThemeOn}>
           <Header darkTheme={isDarkThemeOn}>
             <img
@@ -245,6 +246,7 @@ const App = () => {
           </label>
           <span role="img" aria-label="icon">🌙</span>
         </div>
+        <InstallPopupp/>
       </div>
     );
 }
