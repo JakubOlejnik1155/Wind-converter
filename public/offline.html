@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Wind Converter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #root{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(41, 41, 41);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 24px;
+            color: rgb(25,155,226);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .wave {
+            display: inline-block;
+            border: 10px solid transparent;
+            border-top-color: currentColor;
+            border-radius: 50%;
+            border-style: solid;
+            margin: 5px;
+        }
+
+
+        .waveStrength-3 .wv4.wave,
+        .waveStrength-2 .wv4.wave,
+        .waveStrength-2 .wv3.wave,
+        .waveStrength-1 .wv4.wave,
+        .waveStrength-1 .wv3.wave,
+        .waveStrength-1 .wv2.wave {
+            border-top-color: rgb(202, 202, 202);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div class="waveStrength-3">
+            <div class="wv4 wave">
+                <div class="wv3 wave">
+                    <div class="wv2 wave">
+                        <div class="wv1 wave">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        No internet connection <br/>
+        please Go online...
+    </div>
+</body>
+
+</html>
