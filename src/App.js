@@ -169,6 +169,7 @@ const App = () => {
             <FormControl
               name="knt"
               placeholder="knt"
+              type="number"
               value={state.knt}
               onChange={inputChangeHandler}
               style={
@@ -188,6 +189,7 @@ const App = () => {
             <FormControl
               name="b"
               placeholder="° B"
+              type="number"
               value={state.b}
               style={
                 isDarkThemeOn ? { ...inputStyles, color: "white" } : inputStyles
@@ -206,6 +208,7 @@ const App = () => {
             </InputGroup.Prepend>
             <FormControl
               name="ms"
+              type="number"
               placeholder="m/s"
               value={state.ms}
               onChange={inputChangeHandler}
@@ -226,6 +229,7 @@ const App = () => {
             <FormControl
               placeholder="kph"
               name="kph"
+              type="number"
               value={state.kph}
               onChange={inputChangeHandler}
               style={
