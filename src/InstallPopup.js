@@ -15,10 +15,10 @@ const PopupContainer = styled.div`
     max-width: 500px;
     padding: 20px;
     position: absolute;
-    bottom: 0;
+    bottom: 60px;
     left: 50%;
     text-align: center;
-    transform: translate(-50%, 110%);
+    transform: translate(-50%, 200%);
     transition: all 1s ease-in-out;
 `;
 const CloseButton = styled.button`
