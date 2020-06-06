@@ -1,42 +1,48 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import Cookies from 'js-cookie';
+import Logo from './styles/logo.png';
 
 
 const PopupContainer = styled.div`
-    background-color: rgba(25,155,226, .6);
-    barder: 1px solid rgb(25,155,226);
-    border-radius: 5px;
-    width: 80%;
+    -webkit-box-shadow: 0px -4px 19px 1px rgba(94,94,94,1);
+    -moz-box-shadow: 0px -4px 19px 1px rgba(94,94,94,1);
+    box-shadow: 0px -4px 19px 1px rgba(94,94,94,1);
+    background-color: snow;
+    barder: 1px solid gray;
+    border-radius: 2px;
+    width: 98%;
     max-width: 500px;
     padding: 20px;
     position: absolute;
-    bottom: 30%;
+    bottom: 0;
     left: 50%;
     text-align: center;
-    transform: translate(-50%, 500%);
+    transform: translate(-50%, 110%);
     transition: all 1s ease-in-out;
 `;
 const CloseButton = styled.button`
     padding: 3px 5px;
     border-radius: 5px;
-    background-color: rgba(41,41,41, .8);
-    font-size: 14px;
+    // background-color: rgba(41,41,41, .8);
+    font-size: 18px;
     font-weight: bold;
-    color: snow;
+    width: 30px;
+    height: 30px;
     position: absolute;
-    border: 1px solid rgb(255,200,61);
+    outline: none;
+    border: none;
     top: 5px;
     right: 5px;
 `;
 const Button = styled.button`
     padding: 5px 10px;
     font-size: 18px;
-    border: 2px solid rgb(255,200,61);
-    border-radius: 10px;
     color: snow;
+    border: none;
+    outline: none;
     margin: 40px 20px 0px 20px;
-    background-color: rgba(41,41,41, .9);
+    background-color: rgb(25, 155, 226);
 `;
 
 
@@ -79,8 +85,9 @@ const InstallPopupp = () => {
 
     return (
       <PopupContainer id="btn-container">
-        <CloseButton id="close">close</CloseButton>
-        <Button id="btn">Install As PWA App</Button>
+        <CloseButton id="close">X</CloseButton>
+        <img src={Logo} alt="logo" width="60" height="60" style={{verticalAlign: 'middle'}}/>
+        <Button id="btn">Install Wind Converter</Button>
         <p style={{ marginTop: "10px", marginBottom: '0px' }}>
           <label
             htmlFor="allow"
