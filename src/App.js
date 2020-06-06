@@ -8,7 +8,7 @@ import InstallPopupp from './InstallPopup';
 
 const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: ${(props) => (props.darkTheme ? "rgb(41,41,41)" : "white")};
   display: flex;
   flex-direction: column;
